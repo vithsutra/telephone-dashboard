@@ -6,9 +6,9 @@ function User() {
       /admin utl parmert
       
       /usercards
-      /create{
+      /create
       /metchin id to create user
-}
+
     </div>
   )
 }

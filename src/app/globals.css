@@ -10,6 +10,18 @@
 }
 
 :root {
+
+
+  --company-primary-royalBlue: #6495ED;
+  --company-white-text: #fff;
+  --company-light-light-gray: #F5F5F7;
+  --company-light-gray: #86868b;
+  --company-dark-gray: #b3afaf;
+  --company-dark-dark-gray-text: #1d1d1f;
+  --company-black: #000000;
+  --company-text-gray: #6e6e73;
+
+
   --background: oklch(1 0 0);
   --foreground: oklch(0.141 0.005 285.823);
   --card: oklch(1 0 0);
@@ -81,6 +93,19 @@
 }
 
 @theme inline {
+
+
+  /* Company Colors */
+  --color-company-primary-royalBlue: var(--company-primary-royalBlue);
+  --color-company-white-text: var(--company-white-text);
+  --color-company-light-light-gray: var(--company-light-light-gray);
+  --color-company-light-gray: var(--company-light-gray);
+  --color-company-dark-gray: var(--company-dark-gray);
+  --color-company-dark-dark-gray-text: var(--company-dark-dark-gray-text);
+  --color-company-black: var(--company-black);
+  --color-company-text-gray: var(--company-text-gray);
+
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
