@@ -1,4 +1,4 @@
-import { Home, Inbox, LogOut, Search, Settings } from "lucide-react";
+import { Home, Inbox, LogOut, Settings } from "lucide-react";
 import Link from "next/link";
 import {
   Sidebar,
