@@ -16,20 +16,14 @@ import Image from "next/image";
 
 const items = [
   {
-    title: "Machines",
-    url: "/machines",
+    title: "Dashbord",
+    url: "/dashbord",
     icon: Home,
   },
   {
     title: "User",
     url: "/user",
     icon: Inbox,
-  },
-
-  {
-    title: "Search",
-    url: "#",
-    icon: Search,
   },
   {
     title: "Settings",
