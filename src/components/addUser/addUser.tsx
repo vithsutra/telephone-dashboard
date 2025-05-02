@@ -11,35 +11,35 @@ import {
 } from "@/components/ui/dialog"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { IndianRupee } from "lucide-react"
+import { User } from "lucide-react"
 import { useState } from "react"
 
 
 
-export default function DialogRecharge() {
-    const [amount,setamount] = useState("");
+export default function AddUser() {
+    const [name,setName] = useState("");
   return (
     <Dialog >
       <DialogTrigger asChild>
-        <Button variant="outline" className=" absolute bottom-4 right-4 bg-company-primary-royalBlue hover:bg-blue-500 text-white hover:text-white rounded-full w-10 h-10"><IndianRupee  width={15}/></Button>
+        <Button variant="outline" className=" absolute bottom-4 right-4 bg-company-primary-royalBlue hover:bg-blue-500 text-white hover:text-white rounded-full w-10 h-10 "><User width={15}   /></Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
-          <DialogTitle>Recharge Machine</DialogTitle>
+          <DialogTitle>Add User</DialogTitle>
           <DialogDescription>
           </DialogDescription>
         </DialogHeader>
         <div className="grid gap-4 py-4">
           <div className="grid grid-cols-4 items-center gap-4">
             <Label htmlFor="name" className="text-right">
-              Rechage
+              Name
             </Label>
-            <Input id="name" type="text" value={amount} placeholder="ex:300" className="col-span-3" />
+            <Input id="name" type="text" value={name} placeholder="ex:300" className="col-span-3" />
           </div>
         
         </div>
         <DialogFooter>
-          <Button className="bg-company-primary-royalBlue hover:bg-blue-500 text-white hover:text-white" type="submit">Recharge</Button>
+          <Button className="bg-company-primary-royalBlue hover:bg-blue-500 text-white hover:text-white" type="submit">Submit</Button>
         </DialogFooter>
       </DialogContent>
     </Dialog>

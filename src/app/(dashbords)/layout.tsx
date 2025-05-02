@@ -1,27 +1,20 @@
-import { Button } from "@/components/ui/button";
 import React from "react";
-import Link from "next/link";
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import { AppSidebar } from "@/components/sidbar/AppSidbar";
 
 function layout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="min-h-screen">
-      <nav className="bg-white shadow-sm p-4">
-        <div className="container mx-auto flex justify-between items-center">
-          <div className="flex items-center space-x-4">
-            <Link href="/dashbords" className="text-xl font-bold">Dashboard</Link>
-            <Link href="/dashbords/user">Users</Link>
-            <Link href="/dashbords/machines">Machines</Link>
-            <Link href="/dashbords/post">Posts</Link>
-          </div>
-          <Button variant="outline">Logout</Button>
-        </div>
-      </nav>
-      <main className="container mx-auto p-4">
+    <SidebarProvider>
+      <AppSidebar/>
+      <main className="container p-4 ">
+        <SidebarTrigger/>
+        <div className=" p-3 pl-10">
         {children}
+        </div>
       </main>
       {/* three dot logo /user /home /logout
       <Button >hello</Button> */}
-    </div>
+    </SidebarProvider>
   );
 }
 
