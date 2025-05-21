@@ -5,7 +5,7 @@ import {
   SidebarContent,
   SidebarFooter,
   SidebarGroup,
-  SidebarGroupContent,
+  SidebarGroupContent,      
 
   SidebarHeader,
   SidebarMenu,
@@ -17,7 +17,7 @@ import Image from "next/image";
 const items = [
   {
     title: "Dashbord",
-    url: "/dashbord",
+    url: "/dashboard",
     icon: Home,
   },
   {
@@ -65,7 +65,7 @@ export function AppSidebar() {
       </SidebarContent>
       <SidebarFooter>
       <SidebarMenuButton className="bg-red-200   border border-red-300 hover:bg-red-300 duration-500">
-          <Link href="/Logout" className="flex gap-2 pl-1 items-center  ">
+          <Link href="/login" className="flex gap-2 pl-1 items-center ">
             <LogOut width={15} />
             <span>Logout</span>
           </Link>

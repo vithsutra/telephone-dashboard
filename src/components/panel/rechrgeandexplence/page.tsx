@@ -2,7 +2,7 @@
 import { Payment, columns } from "./columns"
 import { DataTable } from "./data-table"
 
-async function getData(tab: string): Promise<Payment[]> {
+async function getData(tab: string) {
   if (tab === "recharge") {
     return [
       {
@@ -25,7 +25,8 @@ async function getData(tab: string): Promise<Payment[]> {
 }
 
 export default async function RechageAndAmountPage({ tab } :{tab:string}) {
-  const data = await getData(tab);
+  
+  const data =  getData(tab);
 
   return (
     <div className="container mx-auto py-10 w-full">
