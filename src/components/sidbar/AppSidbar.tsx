@@ -1,5 +1,5 @@
+"use client";
 import { Home, Inbox, LogOut, Settings } from "lucide-react";
-import Link from "next/link";
 import {
   Sidebar,
   SidebarContent,
@@ -13,6 +13,8 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+import { removeId } from "@/hooks/token/Id";
 
 const items = [
   {
@@ -33,6 +35,14 @@ const items = [
 ];
 
 export function AppSidebar() {
+  const router = useRouter();
+
+  function logout(){
+    removeId()
+    router.push("/login")
+  }
+
+
   return (
     <Sidebar>
       <SidebarHeader className="flex flex-row pt-7  items-baseline  pl-3.5 w-full space-x-2">
@@ -64,11 +74,11 @@ export function AppSidebar() {
         </SidebarGroup>
       </SidebarContent>
       <SidebarFooter>
-      <SidebarMenuButton className="bg-red-200   border border-red-300 hover:bg-red-300 duration-500">
-          <Link href="/login" className="flex gap-2 pl-1 items-center ">
+      <SidebarMenuButton className="bg-red-200   border border-red-300 hover:bg-red-300 duration-500" onClick={logout}>
+          <div  className="flex gap-2 pl-1 items-center ">
             <LogOut width={15} />
-            <span>Logout</span>
-          </Link>
+            <span className="text-sm font-medium text-black">Logout</span>
+          </div>
         </SidebarMenuButton>
       </SidebarFooter>
     </Sidebar>

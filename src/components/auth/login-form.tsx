@@ -8,11 +8,14 @@ import { handleLogin } from "@/lib/authApi/login";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
 import { setId } from "@/hooks/token/Id";
+import { useState } from "react";
+import { set } from "react-hook-form";
 export function LoginForm({
   className,
   ...props
 }: React.ComponentPropsWithoutRef<"form">) {
     const router = useRouter();
+    const [loading,setLoading] = useState(false);
   
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -21,6 +24,7 @@ export function LoginForm({
     const password = formData.get("password") as string;
 
     try {
+      setLoading(true);
       if (username && password) {
         const response = await handleLogin(username, password); 
         if (response.admin_id ) {
@@ -39,6 +43,9 @@ export function LoginForm({
       toast.error("Login Error", {
         description: error.response?.data?.message || "Something went wrong", 
       });
+    }
+    finally {
+      setLoading(false);
     }
   } 
 
@@ -86,7 +93,7 @@ export function LoginForm({
           />
         </div>
         <Button type="submit" className="w-full">
-          Login
+          {loading? "Loading..." : "Login"}
         </Button>
       </div>
     </form>
