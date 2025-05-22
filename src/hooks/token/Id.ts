@@ -7,3 +7,7 @@ export  function getId() {
 export function setId(id: string) {
   localStorage.setItem("admin_id", id);
 } 
+
+export function removeId() {
+  localStorage.removeItem("admin_id");
+}

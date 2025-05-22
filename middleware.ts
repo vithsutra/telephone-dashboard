@@ -4,7 +4,7 @@
 // const publicRoutes = ["/login"];
 
 // export function middleware(request: NextRequest) {
-//   const token = request.cookies.get("authToken")?.value;
+//   const token = request.cookies.get("admin_id")?.value;
 //   const { pathname } = request.nextUrl;
 
 //   const isPublicRoute = publicRoutes.some((path) => pathname.startsWith(path));
