@@ -1,5 +1,5 @@
-import { History } from "@/app/(dashboards)/dashboard/[id]/page"
-import { Machine } from "@/app/(dashboards)/dashboard/page"
+import { History } from "@/app/(panel)/dashboard/[id]/page"
+import { Machine } from "@/app/(panel)/dashboard/page"
 import { getId } from "@/hooks/token/Id"
 import { secret } from "@/lib/utils"
 import axios from "axios"

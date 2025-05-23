@@ -1,4 +1,4 @@
-import { History } from "@/app/(dashboards)/dashboard/[id]/page"
+import { History } from "@/app/(panel)/dashboard/[id]/page"
 import { secret } from "@/lib/utils"
 import axios from "axios"
 
