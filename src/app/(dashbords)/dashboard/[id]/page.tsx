@@ -30,7 +30,6 @@ import { getExpense } from "@/hooks/panel/machines/getExpense";
 import { useParams } from "next/navigation";
 import { toast } from "sonner";
 import { rechargeMachine } from "@/lib/panel/Machine/rechargeMachine";
-import { set } from "react-hook-form";
 
 export type History = {
   amount: number;
@@ -89,6 +88,7 @@ export default function FinanceTabs() {
           toast.success("Added successfully");
         }
       } catch (error) {
+        console.log(error)
         toast.error("Error occured");
       }finally{
         setLoading(false) 
