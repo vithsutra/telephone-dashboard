@@ -1,4 +1,4 @@
-import { User } from "@/app/(dashbords)/user/page";
+import { User } from "@/app/(dashboards)/user/page";
 import { getId } from "@/hooks/token/Id";
 import { secret } from "@/lib/utils";
 import axios from "axios";
